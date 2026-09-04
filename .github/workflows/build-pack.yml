@@ -52,19 +52,22 @@ jobs:
         run: |
           n=${{ steps.count.outputs.count }}
           tag="pack-v1"
+          {
+            echo "Gumroad-ready build - $n wallpapers at 2778x6019 (9:19.5)."
+            echo
+            echo "- VaultScreen-8K-Pack.zip - the sellable download: /wallpapers (PNG) + README.txt. No mockups inside."
+            echo "- VaultScreen-8K-previews.zip - marketing only: per-wallpaper gallery mockups, per-theme hero shots, collection preview, contact-sheet grid. All under 3000 px."
+          } > notes.md
           gh release view "$tag" >/dev/null 2>&1 || \
             gh release create "$tag" \
               --target arena/01a06e8f-vaultscreen-8k \
-              --title "VaultScreen 8K — Wallpaper Pack Vol. 1" \
-              --notes "Gumroad-ready build. VaultScreen-8K-Pack.zip is the sellable file (wallpapers + README only). VaultScreen-8K-previews.zip holds the marketing mockups."
+              --title "VaultScreen 8K - Wallpaper Pack Vol. 1" \
+              --notes-file notes.md
           gh release upload "$tag" \
             pack/dist/VaultScreen-8K-Pack.zip \
             pack/dist/VaultScreen-8K-previews.zip \
             --clobber
-          gh release edit "$tag" --notes "Gumroad-ready build — $n wallpapers at 2778x6019 (9:19.5).
-
-* \`VaultScreen-8K-Pack.zip\` — the sellable download: /wallpapers (PNG) + README.txt. No mockups inside.
-* \`VaultScreen-8K-previews.zip\` — marketing only: per-wallpaper gallery mockups, per-theme hero shots, collection preview, contact-sheet grid. All under 3000 px."
+          gh release edit "$tag" --notes-file notes.md
 
       - name: Commit web-size previews
         run: |
