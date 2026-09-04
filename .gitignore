@@ -3,3 +3,8 @@ work/downloads/
 work/thumbs/
 work/manifest.json
 *.mp4
+
+# pack build: raw model outputs + full-res renders are rebuilt, not tracked
+pack/raw/
+pack/dist/wallpapers/
+pack/dist/*.zip
