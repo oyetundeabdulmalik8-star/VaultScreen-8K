@@ -64,11 +64,18 @@ def upscale(im, w=OUT_W, h=OUT_H):
     return ImageEnhance.Color(im).enhance(1.03)
 
 
+def source_images(d):
+    """Masters may be .png (local raw) or .jpg (committed, git-friendly)."""
+    files = glob.glob(os.path.join(d, "*.png")) + glob.glob(os.path.join(d, "*.jpg"))
+    return sorted(files)
+
+
 def build_wallpapers():
     os.makedirs(WALLS, exist_ok=True)
     made = []
-    for f in sorted(glob.glob(os.path.join(RAW, "*.png"))):
-        dst = os.path.join(WALLS, os.path.basename(f))
+    for f in source_images(RAW):
+        dst = os.path.join(WALLS,
+                           os.path.splitext(os.path.basename(f))[0] + ".png")
         out = upscale(crop_to_ratio(Image.open(f)))
         out.save(dst, "PNG", optimize=True)
         mb = os.path.getsize(dst) / 1e6
@@ -204,8 +211,8 @@ def compose_single(wall_path, out_path, canvas=(1400, 1900), screen_w=760,
 
 def preview_sources():
     """Previews are built from the raw renders (identical content, cheaper)."""
-    src = RAW if glob.glob(os.path.join(RAW, "*.png")) else WALLS
-    return sorted(glob.glob(os.path.join(src, "*.png")))
+    src = RAW if source_images(RAW) else WALLS
+    return source_images(src)
 
 
 def build_gallery():
