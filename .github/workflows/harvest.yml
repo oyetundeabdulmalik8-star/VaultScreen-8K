@@ -32,6 +32,8 @@ jobs:
           ffmpeg -version | head -1
 
       - name: Run harvest
+        env:
+          FORCE_KEYS: "03 08a 08b 08c"
         run: python work/harvest.py
         continue-on-error: true
 

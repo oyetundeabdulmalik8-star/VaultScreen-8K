@@ -20,6 +20,8 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 DL = os.path.join(ROOT, "downloads")
 THUMBS = os.path.join(ROOT, "thumbs")
 MAX_IMAGES = 6  # per post
+PER_KEY_MAX = {"03": 12}
+FORCE = set(os.environ.get("FORCE_KEYS", "").split())
 THUMB_W = 520
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -155,9 +157,15 @@ def main():
     with open(os.path.join(ROOT, "urls.txt")) as f:
         entries = [l.split(None, 1) for l in f.read().splitlines() if l.strip()]
 
+    import glob as _glob
     for key, url in entries:
         url = url.strip()
-        print("=== %s %s" % (key, url))
+        if _glob.glob(os.path.join(THUMBS, key + "_*")) and key not in FORCE:
+            print("=== %s SKIP (thumbs exist)" % key)
+            continue
+        global MAX_IMAGES
+        MAX_IMAGES = PER_KEY_MAX.get(key, 6)
+        print("=== %s %s (max %d)" % (key, url, MAX_IMAGES))
         outdir = os.path.join(DL, key)
         shutil.rmtree(outdir, ignore_errors=True)
         os.makedirs(outdir, exist_ok=True)
@@ -225,7 +233,18 @@ def main():
                                                   rec["method"]))
         manifest.append(rec)
 
-    with open(os.path.join(ROOT, "manifest.json"), "w") as f:
+    mpath = os.path.join(ROOT, "manifest.json")
+    merged = {}
+    if os.path.exists(mpath):
+        try:
+            for r in json.load(open(mpath)):
+                merged[r["key"]] = r
+        except Exception:  # noqa: BLE001
+            pass
+    for r in manifest:
+        merged[r["key"]] = r
+    manifest = [merged[k] for k in sorted(merged)]
+    with open(mpath, "w") as f:
         json.dump(manifest, f, indent=2)
     print(json.dumps([{k: r[k] for k in ("key", "method", "images")}
                       for r in manifest], indent=2))
