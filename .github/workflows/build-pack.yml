@@ -39,7 +39,7 @@ jobs:
 
       - name: Build full-res wallpapers, previews and zips
         env:
-          VS_RAW_DIR: pack/masters
+          VS_RAW_DIR: ${{ github.workspace }}/pack/masters
         run: |
           cd pack
           python scripts/build_pack.py walls gallery hero collection grid package
