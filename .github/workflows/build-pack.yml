@@ -1,0 +1,75 @@
+name: Build wallpaper pack
+
+# Renders the full-res pack on a runner (the sandbox cannot hold ~430 MB of
+# 2778x6019 PNGs) and publishes the zips as release assets.
+
+on:
+  push:
+    branches:
+      - arena/01a06e8f-vaultscreen-8k
+    paths:
+      - 'pack/masters/**'
+      - 'pack/scripts/build_pack.py'
+      - '.github/workflows/build-pack.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: arena/01a06e8f-vaultscreen-8k
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install --upgrade pillow
+
+      - name: Count masters
+        id: count
+        run: |
+          n=$(ls pack/masters/*.jpg 2>/dev/null | wc -l)
+          echo "count=$n" >> "$GITHUB_OUTPUT"
+          echo "masters: $n"
+
+      - name: Build full-res wallpapers, previews and zips
+        env:
+          VS_RAW_DIR: pack/masters
+        run: |
+          cd pack
+          python scripts/build_pack.py walls gallery hero collection grid package
+          ls -la dist
+          du -sh dist/wallpapers dist/previews
+
+      - name: Publish release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=${{ steps.count.outputs.count }}
+          tag="pack-v1"
+          gh release view "$tag" >/dev/null 2>&1 || \
+            gh release create "$tag" \
+              --target arena/01a06e8f-vaultscreen-8k \
+              --title "VaultScreen 8K — Wallpaper Pack Vol. 1" \
+              --notes "Gumroad-ready build. VaultScreen-8K-Pack.zip is the sellable file (wallpapers + README only). VaultScreen-8K-previews.zip holds the marketing mockups."
+          gh release upload "$tag" \
+            pack/dist/VaultScreen-8K-Pack.zip \
+            pack/dist/VaultScreen-8K-previews.zip \
+            --clobber
+          gh release edit "$tag" --notes "Gumroad-ready build — $n wallpapers at 2778x6019 (9:19.5).
+
+* \`VaultScreen-8K-Pack.zip\` — the sellable download: /wallpapers (PNG) + README.txt. No mockups inside.
+* \`VaultScreen-8K-previews.zip\` — marketing only: per-wallpaper gallery mockups, per-theme hero shots, collection preview, contact-sheet grid. All under 3000 px."
+
+      - name: Commit web-size previews
+        run: |
+          git config user.name "pack-bot"
+          git config user.email "pack-bot@users.noreply.github.com"
+          git add -f pack/dist/previews || true
+          git commit -m "build: refresh preview mockups" || echo "no preview changes"
+          git push origin HEAD:arena/01a06e8f-vaultscreen-8k || true

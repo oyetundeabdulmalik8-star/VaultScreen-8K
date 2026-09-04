@@ -15,7 +15,7 @@ import sys
 from PIL import Image, ImageDraw, ImageFilter, ImageEnhance
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW = os.path.join(ROOT, "raw")
+RAW = os.environ.get("VS_RAW_DIR") or os.path.join(ROOT, "raw")
 DIST = os.path.join(ROOT, "dist")
 WALLS = os.path.join(DIST, "wallpapers")
 PREV = os.path.join(DIST, "previews")
@@ -293,6 +293,67 @@ def build_grid(out_name="all-wallpapers-grid.jpg", cols=6, cell_w=420):
     return out
 
 
+README = """VaultScreen 8K — Wallpaper Pack Vol. 1
+=========================================
+
+30 original wallpapers in five curated collections:
+  Neon Noir Cities        neon-noir-01 .. 06
+  Cosmic Gradients        cosmic-01 .. 06
+  Minimal Nature          minimal-nature-01 .. 06
+  Cinematic Dusk          cinematic-dusk-01 .. 06
+  Abstract Glass & Liquid glass-liquid-01 .. 06
+
+FILES
+  Format      PNG, 24-bit RGB
+  Resolution  2778 x 6019 px
+  Aspect      9:19.5 vertical
+
+COMPATIBILITY
+  Built for iPhone 15 / 15 Pro / 15 Pro Max / 16 / 16 Pro / 16 Pro Max and any
+  9:19.5 display. They also fit 19.5:9 phones from other makers; on shorter
+  screens (18:9, 20:9) iOS/Android will crop slightly top and bottom - every
+  image keeps its subject away from the extreme edges so cropping stays safe.
+  Each wallpaper leaves clear space near the top for the clock and near the
+  bottom for the dock.
+
+HOW TO SET
+  Save to Photos -> open the image -> Share -> Use as Wallpaper.
+  For the sharpest result transfer the original PNG (AirDrop, iCloud Drive or
+  cable) rather than sending it through a messaging app, which recompresses.
+
+NOTES
+  All artwork is original, AI-assisted and produced for this pack. No text,
+  logos or interface elements are baked into the images.
+
+TERMS
+  Personal use. Wallpapers may not be resold, redistributed or bundled into
+  another pack.
+"""
+
+
+def package():
+    """Buyer zip (wallpapers + README) and a separate marketing preview zip."""
+    import zipfile
+    os.makedirs(DIST, exist_ok=True)
+    walls = sorted(glob.glob(os.path.join(WALLS, "*.png")))
+    buyer = os.path.join(DIST, "VaultScreen-8K-Pack.zip")
+    with zipfile.ZipFile(buyer, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as z:
+        for f in walls:
+            z.write(f, "wallpapers/" + os.path.basename(f))
+        z.writestr("README.txt", README)
+    print("  zip        %s  %.1f MB  (%d wallpapers)"
+          % (os.path.basename(buyer), os.path.getsize(buyer) / 1e6, len(walls)))
+
+    prev = os.path.join(DIST, "VaultScreen-8K-previews.zip")
+    with zipfile.ZipFile(prev, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as z:
+        for f in sorted(glob.glob(os.path.join(PREV, "**", "*.jpg"),
+                                  recursive=True)):
+            z.write(f, "previews/" + os.path.relpath(f, PREV))
+    print("  zip        %s  %.1f MB"
+          % (os.path.basename(prev), os.path.getsize(prev) / 1e6))
+    return buyer, prev
+
+
 def main():
     steps = sys.argv[1:] or ["walls", "gallery", "hero", "collection", "grid"]
     if "walls" in steps:
@@ -309,6 +370,8 @@ def main():
         build_collection(seen)
     if "grid" in steps:
         build_grid()
+    if "package" in steps:
+        package()
     counts = {}
     for f in preview_sources():
         counts[theme_of(f)] = counts.get(theme_of(f), 0) + 1
