@@ -19,7 +19,7 @@ import urllib.request
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DL = os.path.join(ROOT, "downloads")
 THUMBS = os.path.join(ROOT, "thumbs")
-MAX_IMAGES = 6
+MAX_IMAGES = 6  # per post
 THUMB_W = 520
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "

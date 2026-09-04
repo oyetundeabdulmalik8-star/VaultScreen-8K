@@ -2,6 +2,13 @@ name: Harvest wallpaper sources
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - arena/01a06e8f-vaultscreen-8k
+    paths:
+      - 'work/harvest.py'
+      - 'work/urls.txt'
+      - '.github/workflows/harvest.yml'
 
 permissions:
   contents: write
