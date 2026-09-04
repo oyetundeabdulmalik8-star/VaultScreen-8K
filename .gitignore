@@ -1,2 +1,5 @@
+# Harvested third-party source media — regenerate with .github/workflows/harvest.yml
 work/downloads/
+work/thumbs/
+work/manifest.json
 *.mp4
