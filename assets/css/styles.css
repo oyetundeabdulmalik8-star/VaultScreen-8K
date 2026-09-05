@@ -949,132 +949,6 @@ button {
 .story-facts span { font-size: 0.95rem; color: var(--text-2); text-wrap: pretty; }
 
 
-/* Pricing
-   ========================================================================== */
-.size-toggle {
-  display: inline-flex;
-  gap: 0.25rem;
-  margin: 0 auto clamp(2rem, 4vw, 3rem);
-  padding: 0.3rem;
-  border-radius: 999px;
-  border: 1px solid var(--border-strong);
-  background: var(--surface);
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.js .size-toggle.reveal { transform: translate(-50%, 26px); }
-.js .size-toggle.reveal.is-visible { transform: translateX(-50%); }
-.size-btn {
-  padding: 0.6rem 1.15rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-2);
-  transition: color 0.2s, background 0.25s, box-shadow 0.25s;
-}
-.size-btn:hover { color: var(--text); }
-.size-btn[aria-selected="true"] {
-  background: var(--accent);
-  color: var(--accent-ink);
-  box-shadow: 0 6px 20px -8px var(--accent-glow);
-}
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  align-items: stretch;
-}
-.price-card { display: flex; flex-direction: column; gap: 1.5rem; }
-.price-card .check-list { flex: 1; margin-top: 0; }
-.price-card .check-list li { align-items: flex-start; }
-.price-card .check-list .icon { margin-top: 0.2rem; }
-.price-card--featured {
-  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), var(--surface));
-  box-shadow: 0 0 80px -30px var(--accent-glow);
-}
-.price-card--featured::before {
-  background: radial-gradient(
-    560px circle at var(--mx, 50%) var(--my, 0%),
-    color-mix(in srgb, var(--accent) 18%, transparent),
-    transparent 42%
-  );
-}
-.price-badge {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 999px;
-  background: var(--accent);
-  color: var(--accent-ink);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.price-head h3 { margin-bottom: 0.4rem; padding-right: 6.5rem; }
-.price-card:not(.price-card--featured) .price-head h3 { padding-right: 0; }
-.price-head p { font-size: 0.95rem; }
-.price {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border);
-}
-.price-from { font-size: var(--fs-sm); color: var(--text-3); }
-.price-amount {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(2rem, 1.5rem + 1.5vw, 2.75rem);
-  letter-spacing: -0.03em;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-  transition: opacity 0.2s;
-}
-.price-amount.is-swapping { opacity: 0; }
-.price-amount.is-ask { font-size: 1.35rem; color: var(--text-2); letter-spacing: 0; }
-
-.addons {
-  max-width: 46rem;
-  margin: clamp(2rem, 5vw, 3.5rem) auto 0;
-  padding: clamp(1.25rem, 3vw, 1.75rem) clamp(1.25rem, 3vw, 2rem);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  background: var(--surface);
-}
-.addons-title {
-  margin-bottom: 1rem;
-  font-family: var(--font-body);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-3);
-}
-.addons-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 2.5rem; }
-.addons-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  padding: 0.6rem 0;
-  border-bottom: 1px dashed var(--border);
-  font-size: 0.95rem;
-  color: var(--text-2);
-}
-.addon-price {
-  font-family: var(--font-display);
-  font-weight: 700;
-  color: var(--text);
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-
-
 /* 10. Process
    ========================================================================== */
 .steps {
@@ -1512,8 +1386,6 @@ button {
   .steps { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid { grid-template-columns: 1fr; }
-  .pricing-grid { grid-template-columns: 1fr; max-width: 28rem; margin-inline: auto; }
-  .addons-list { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .map-card { min-height: 22rem; }
 
@@ -1532,10 +1404,6 @@ button {
   .bg-orb { filter: blur(60px); }
   .chip { font-size: 0.8rem; padding: 0.5rem 0.8rem; }
   .quote-card { position: static; margin: -1.25rem 0.75rem 0; }
-  .size-toggle { display: flex; width: 100%; left: 0; transform: none; }
-  .js .size-toggle.reveal { transform: translateY(26px); }
-  .js .size-toggle.reveal.is-visible { transform: none; }
-  .size-btn { flex: 1; padding-inline: 0.5rem; font-size: 0.85rem; }
   .step::before { font-size: 5.5rem; }
   .story-facts li { grid-template-columns: 1fr; gap: 0.25rem; }
 }

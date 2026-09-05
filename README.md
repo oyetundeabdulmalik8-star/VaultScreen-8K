@@ -1,5 +1,7 @@
 # Somi Steam Car Wash — website
 
+**Live:** https://oyetundeabdulmalik8-star.github.io/VaultScreen-8K/
+
 Single-page marketing site for **Somi Steam Car Wash**, Plot 90 Kudirat Abiola Way, Oregun, Ikeja, Lagos — built in the Claude Fable 5 design style: dark canvas, one accent colour, glass surfaces, editorial typography and restrained motion.
 
 Zero dependencies. No build step. Plain HTML, CSS and JavaScript.
@@ -26,7 +28,6 @@ CONTENT-GUIDE.md            what's still open to fill in
 | `#services`  | Bento grid — steam exterior, interior, engine bay, detailing, team      |
 | `#lounge`    | Bar, restaurant & laundry — the "relax while we work" differentiator    |
 | `#story`     | Heritage band — founded 2001 by Somi Uranta, Somi Group, one-stop plot  |
-| `#pricing`   | Three tiers + add-ons with a Saloon / SUV / Bus price toggle            |
 | `#process`   | Drive in → pick a service → relax & collect                             |
 | —            | Stats: 20-car capacity · 4.0 rating · 164 reviews · 7 days              |
 | `#reviews`   | Three real Google reviews + link to all reviews                         |
@@ -45,7 +46,6 @@ python3 -m http.server 8080      # or: npx serve .
 - **Copy** — everything lives in `index.html`; search for `EDIT:` for the spots still waiting on real info.
 - **Colours / fonts** — the tokens at the top of `assets/css/styles.css`. `--accent` drives the whole site.
 - **Photos** — the current images are AI-generated placeholders. Drop real photos into `assets/img/` with the same filenames (`hero-1600.jpg` / `hero-800.jpg`, `interior-1200.jpg` / `interior-600.jpg`, `lounge-1600.jpg` / `lounge-800.jpg`) and they'll slot straight in.
-- **Prices** — in `index.html`, each `.price` / `.addon-price` element has `data-saloon`, `data-suv`, `data-bus` attributes. Put plain numbers in (e.g. `data-saloon="5000"`) and the toggle formats them as ₦5,000. Leave one empty and it shows "Ask".
 - **Map / directions** — all links use the Google Place ID `ChIJd1pBMEWSOxARdOuVdtgQo38`; no API key required.
 - **Structured data** — `AutoWash` JSON-LD in `<head>` gives Google the address, phone, rating and map.
 
