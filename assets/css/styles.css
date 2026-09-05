@@ -914,6 +914,41 @@ button {
 .feature-list div > span { color: var(--text-2); font-size: 0.95rem; }
 
 
+/* Heritage / story band
+   ========================================================================== */
+.story {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  background:
+    radial-gradient(90% 120% at 100% 0%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 55%),
+    linear-gradient(180deg, var(--surface-2), var(--surface));
+}
+.story-copy h2 { font-size: var(--fs-h2); }
+.story-facts { display: grid; gap: 0; }
+.story-facts li {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+  align-items: baseline;
+}
+.story-facts li:last-child { border-bottom: 1px solid var(--border); }
+.story-facts strong {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+}
+.story-facts span { font-size: 0.95rem; color: var(--text-2); text-wrap: pretty; }
+
+
 /* Pricing
    ========================================================================== */
 .size-toggle {
@@ -1473,6 +1508,7 @@ button {
 
   .split { grid-template-columns: 1fr; }
   .split-media { margin-bottom: 2rem; }
+  .story { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid { grid-template-columns: 1fr; }
@@ -1501,6 +1537,7 @@ button {
   .js .size-toggle.reveal.is-visible { transform: none; }
   .size-btn { flex: 1; padding-inline: 0.5rem; font-size: 0.85rem; }
   .step::before { font-size: 5.5rem; }
+  .story-facts li { grid-template-columns: 1fr; gap: 0.25rem; }
 }
 
 

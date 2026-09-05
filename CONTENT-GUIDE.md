@@ -1,33 +1,31 @@
 # Content guide — what's in, what's still open
 
-The site is built from the Google Business listing. Below is what's already in place and what would make it stronger. Send anything here in chat and it gets wired in.
+Built from the Google Business listing plus everything publicly findable around it (directory listings, the 2013 WinTV documentary on the Somi Group, press mentions of the founder). Send anything below in chat and it gets wired in.
 
-## ✅ Already in
+## ✅ In place
 
 | Item | Source |
 | --- | --- |
-| Name, address, phone, plus code | Google Maps listing |
-| Rating 4.0 · 164 reviews | Google Maps listing |
-| 20-car capacity, bar, restaurant, laundry | Google reviews |
-| 3 testimonials (Adebowale O., Chukwuka E., Emeka N.) | Google reviews, quoted verbatim |
-| Services list | Inferred from "steam car wash" + "most car care services" — **please confirm** |
-| Map embed + directions + WhatsApp links | Derived from the listing |
+| Name, address, plus code, main phone 0803 331 8896 | Google Maps listing |
+| Second phone 0802 306 2776, email info@somisteamcarwash.com | Somi Group documentary / ConnectCiti listing |
+| Founded 2001 by Somi Uranta; part of the Somi Group | Documentary + press ("founder/CEO of Somi Steam Car Wash/Bar") |
+| Rating 4.0 · 164 reviews | Google |
+| 20-car capacity, pay-before-service, open Sundays | Google reviews |
+| Engine steaming + on-site decarbonisation machine | Google reviews |
+| Bar, restaurant (native dishes, asun, BBQ chicken), Express Steam Dry Cleaners, salon, accessories & fragrances, mechanic on the plot | Google reviews + documentary |
+| 3 verbatim Google reviews | Google |
+| Map embed, directions, WhatsApp, YouTube documentary link | Derived |
+| Opening hours | **None published — site says "Open every day, Sundays included"** |
 
-## 🔲 Still open — highest impact first
+## 🔲 Still open
 
-1. **Opening hours** — e.g. "Mon–Sat 7:00–20:00, Sun 9:00–18:00". The listing has none. (`EDIT:` marker in the Visit section.)
-2. **Confirm the service list** — currently: steam exterior wash · interior steam & vacuum · engine bay cleaning · seat/upholstery shampoo · tyre & rim shine · full detailing. Add/remove as needed.
-3. **Prices** — the pricing section is built with three tiers (Exterior Steam · Inside & Out · Full Detail) and four add-ons, each with a Saloon / SUV / Bus toggle. Send the numbers per size and they drop straight in. Also tell me if the tier names or what's included need changing.
-4. **Real photos** — of the yard, the team at work, the bar/lounge. The current three images are AI-generated stand-ins.
-5. **Social links** — Instagram / Facebook / TikTok URLs (footer icons currently point to `#`).
-6. **Logo** — SVG or PNG. A generated steam mark is in place.
-7. **Brand colour** — if Somi has one. Site is currently mint-on-black; a one-line change.
-8. **Domain name** — for the canonical URL and social preview.
-9. **WhatsApp number** — currently assumes the listed phone (0803 331 8896) is on WhatsApp. Confirm or provide another.
-10. **Anything else you offer** — car wash membership, fleet/corporate accounts, event hire of the lounge, etc.
+1. **Prices** — the only visible placeholders left (₦—). Three tiers × Saloon / SUV / Bus, plus add-ons. Send the numbers and they drop in.
+2. **Real photos** — hero, interior and lounge images are AI-generated stand-ins. The one real photo on Google (teal canopy, palms, open yard) informed the hero, but genuine shots will convert better.
+3. **Instagram / Facebook / TikTok** — none found publicly; footer currently links Google Maps, WhatsApp and the YouTube documentary.
+4. **Logo** — a generated steam mark is in place.
+5. **Domain** — `somisteamcarwash.com` appears in a directory listing but doesn't currently resolve. Confirm whether you own it (for the canonical URL and the email address shown on the site).
+6. **WhatsApp** — assumes 0803 331 8896 is on WhatsApp.
+7. **Second branch** — the documentary mentions an Ikeja-area branch near Alade Market; if it still operates, a locations block can be added.
 
 ## Optional extras
-
-- Photo gallery
-- Google Analytics / Meta Pixel IDs
-- Online booking (Calendly / WhatsApp pre-filled message is already there)
+- Photo gallery · Google Analytics / Meta Pixel · online booking · fleet/corporate enquiry form

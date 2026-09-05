@@ -68,17 +68,21 @@
     .filter(Boolean);
 
   if ('IntersectionObserver' in window && sections.length) {
+    // Observe every section with an id, so passing through one that isn't
+    // in the nav (e.g. #story) clears the highlight instead of leaving a
+    // stale one behind.
+    const allSections = $$('main section[id], main div[id]');
+    const setActive = (id) => navLinks.forEach((a) => {
+      if (id && a.getAttribute('href') === `#${id}`) a.setAttribute('aria-current', 'true');
+      else a.removeAttribute('aria-current');
+    });
     const spy = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        navLinks.forEach((a) => {
-          const active = a.getAttribute('href') === `#${entry.target.id}`;
-          if (active) a.setAttribute('aria-current', 'true');
-          else a.removeAttribute('aria-current');
-        });
+        setActive(sections.includes(entry.target) ? entry.target.id : null);
       });
     }, { rootMargin: '-40% 0px -55% 0px' });
-    sections.forEach((s) => spy.observe(s));
+    allSections.forEach((s) => spy.observe(s));
   }
 
   /* ------------------------------------------------------------------

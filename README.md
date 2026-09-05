@@ -25,12 +25,13 @@ CONTENT-GUIDE.md            what's still open to fill in
 | —            | Services ticker                                                         |
 | `#services`  | Bento grid — steam exterior, interior, engine bay, detailing, team      |
 | `#lounge`    | Bar, restaurant & laundry — the "relax while we work" differentiator    |
+| `#story`     | Heritage band — founded 2001 by Somi Uranta, Somi Group, one-stop plot  |
 | `#pricing`   | Three tiers + add-ons with a Saloon / SUV / Bus price toggle            |
 | `#process`   | Drive in → pick a service → relax & collect                             |
 | —            | Stats: 20-car capacity · 4.0 rating · 164 reviews · 7 days              |
 | `#reviews`   | Three real Google reviews + link to all reviews                         |
 | `#faq`       | Six FAQs (steam safety, booking, duration, price, location, SUVs)       |
-| `#visit`     | Address, phone, WhatsApp, hours · dark-tinted Google Map · directions   |
+| `#visit`     | Address, two phones, email, WhatsApp · dark-tinted Google Map · directions |
 | —            | Footer · mobile sticky Call / WhatsApp / Directions bar                 |
 
 ## Run locally
