@@ -33,7 +33,7 @@ jobs:
 
       - name: Run harvest
         env:
-          FORCE_KEYS: "16 17 18"
+          FORCE_KEYS: "16a"
         run: python work/harvest.py
         continue-on-error: true
 
