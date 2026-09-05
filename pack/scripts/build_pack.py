@@ -30,7 +30,7 @@ THEMES = {
     "cosmic": "Cosmic Gradients",
     "minimal-nature": "Minimal Nature",
     "cinematic-dusk": "Cinematic Dusk",
-    "glass-liquid": "Abstract Glass & Liquid",
+    "motivation": "Motivation",
 }
 
 
@@ -308,7 +308,7 @@ README = """VaultScreen 8K — Wallpaper Pack Vol. 1
   Cosmic Gradients        cosmic-01 .. 06
   Minimal Nature          minimal-nature-01 .. 06
   Cinematic Dusk          cinematic-dusk-01 .. 06
-  Abstract Glass & Liquid glass-liquid-01 .. 06
+  Motivation              motivation-01 .. 06
 
 FILES
   Format      PNG, 24-bit RGB

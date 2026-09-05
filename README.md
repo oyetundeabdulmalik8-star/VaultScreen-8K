@@ -24,7 +24,7 @@
 ## VaultScreen 8K — Wallpaper Pack Vol. 1 (`pack/`)
 
 30 original wallpapers, 2778 × 6019 px (true 9:19.5), five curated collections of six:
-Neon Noir Cities · Cosmic Gradients · Minimal Nature · Cinematic Dusk · Abstract Glass & Liquid.
+Neon Noir Cities · Cosmic Gradients · Minimal Nature · Cinematic Dusk · Motivation.
 
 Download the built product from the **`pack-v1` release**:
 
