@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- EDIT: page title & description (see CONTENT-GUIDE.md) -->
+  <title>VaultScreen 8K — Clarity you can trust</title>
+  <meta name="description" content="VaultScreen 8K — premium, precision-built protection and clarity for the screens you rely on every day.">
+  <meta name="theme-color" content="#0a0a0c">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VaultScreen 8K — Clarity you can trust">
+  <meta property="og:description" content="Premium, precision-built protection and clarity for the screens you rely on every day.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body>
+
+  <!-- Icon sprite (inline SVG, referenced with <use>) -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/><path d="m3 17 9 5 9-5"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M6 9v12M6 5v.5M10 21v-7a3 3 0 0 1 6 0v7M10 9v12"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="m10 9.5 5 2.5-5 2.5v-5Z" fill="currentColor" stroke="none"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- Ambient backdrop -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg-orb bg-orb--1"></div>
+    <div class="bg-orb bg-orb--2"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-noise"></div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- Header                                                           -->
+  <!-- ================================================================ -->
+  <header class="header" id="top">
+    <div class="container">
+      <a class="brand" href="#top" aria-label="VaultScreen 8K — home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <defs>
+            <linearGradient id="bm" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#6ef2d2"/>
+              <stop offset="1" stop-color="#7aa2ff"/>
+            </linearGradient>
+          </defs>
+          <rect x="1.5" y="1.5" width="29" height="29" rx="8" fill="none" stroke="url(#bm)" stroke-width="1.5"/>
+          <path d="M16 6.5 9 9.3v6.2c0 4.1 2.9 7.3 7 8.3 4.1-1 7-4.2 7-8.3V9.3L16 6.5Z" fill="url(#bm)" opacity=".18" stroke="url(#bm)" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="m12.6 15.5 2.4 2.4 4.6-4.8" fill="none" stroke="#6ef2d2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>VaultScreen<span class="brand-sub"> 8K</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg class="icon icon--menu" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon--close" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#process">How it works</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary nav-cta" href="#contact">Get started <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================== -->
+    <!-- Hero                                                           -->
+    <!-- ============================================================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-copy">
+          <!-- EDIT: announcement pill -->
+          <span class="pill"><span class="pill-dot" aria-hidden="true"></span> Now available — the new 8K series</span>
+
+          <!-- EDIT: headline (each .line animates in separately; <em> = italic serif accent) -->
+          <h1 class="hero-title" id="hero-title">
+            <span class="line"><span class="line-inner" style="--d:.05s">Clarity you can</span></span>
+            <span class="line"><span class="line-inner" style="--d:.17s"><em>actually</em> trust.</span></span>
+          </h1>
+
+          <!-- EDIT: sub-headline -->
+          <p class="lead">Precision-built for the screens you rely on every day. Engineered to disappear, so all that's left is the picture.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn--primary btn--lg" href="#contact">Get started <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost btn--lg" href="#features">Explore features</a>
+          </div>
+
+          <!-- EDIT: trust signals -->
+          <ul class="hero-trust" aria-label="Highlights">
+            <li>
+              <span class="stars" aria-label="Rated 4.9 out of 5">
+                <svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg>
+                <svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg>
+                <svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg>
+                <svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg>
+                <svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg>
+              </span>
+              4.9 average rating
+            </li>
+            <li>Lifetime warranty</li>
+            <li>Free shipping</li>
+          </ul>
+        </div>
+
+        <!-- Abstract product visual (pure CSS; replace with a real image if preferred) -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="chip chip--1"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg> 9H hardness</div>
+          <div class="chip chip--2"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg> 99.9% clarity</div>
+          <div class="chip chip--3"><svg class="icon" aria-hidden="true"><use href="#i-zap"/></svg> Fits in seconds</div>
+
+          <div class="screen" data-tilt>
+            <div class="screen-orb screen-orb--a"></div>
+            <div class="screen-orb screen-orb--b"></div>
+            <div class="screen-grid"></div>
+            <div class="screen-sheen"></div>
+            <div class="screen-content">
+              <div class="screen-topbar"><span></span><span></span><span></span></div>
+              <div class="screen-body">
+                <div class="screen-bars">
+                  <span style="--h:45%;--pd:0s"></span>
+                  <span style="--h:70%;--pd:-.4s"></span>
+                  <span style="--h:55%;--pd:-.8s"></span>
+                  <span style="--h:90%;--pd:-1.2s"></span>
+                  <span style="--h:65%;--pd:-1.6s"></span>
+                  <span style="--h:100%;--pd:-2s"></span>
+                  <span style="--h:80%;--pd:-2.4s"></span>
+                </div>
+                <div class="screen-badge">8K<small>Ultra clarity</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- Ticker                                                         -->
+    <!-- ============================================================== -->
+    <!-- EDIT: ticker items (list is duplicated for the seamless loop) -->
+    <div class="ticker" aria-label="Highlights">
+      <div class="ticker-track">
+        <ul class="ticker-list">
+          <li>Precision-cut fit</li>
+          <li>Anti-glare finish</li>
+          <li>Fingerprint resistant</li>
+          <li>Bubble-free install</li>
+          <li>Case friendly</li>
+          <li>Lifetime replacement</li>
+          <li>Ships worldwide</li>
+        </ul>
+        <ul class="ticker-list" aria-hidden="true">
+          <li>Precision-cut fit</li>
+          <li>Anti-glare finish</li>
+          <li>Fingerprint resistant</li>
+          <li>Bubble-free install</li>
+          <li>Case friendly</li>
+          <li>Lifetime replacement</li>
+          <li>Ships worldwide</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- Features (bento)                                               -->
+    <!-- ============================================================== -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Why VaultScreen</span>
+          <h2 id="features-title">Built to <em>disappear</em>. Made to endure.</h2>
+          <p class="section-sub">Every detail is engineered with one goal — protection you never notice, and clarity you never lose.</p>
+        </div>
+
+        <div class="bento">
+          <!-- EDIT: feature cards (headline, copy, icon id) -->
+          <article class="card card--wide reveal" data-spotlight>
+            <div>
+              <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg></div>
+              <h3>Optical-grade clarity</h3>
+              <p>An ultra-thin, multi-layer construction transmits virtually all the light your display puts out — no haze, no rainbow tint, no colour shift. What you see is exactly what the screen intended.</p>
+            </div>
+            <div class="ring" role="img" aria-label="99 percent light transmission">
+              <svg viewBox="0 0 36 36" aria-hidden="true">
+                <circle class="ring-bg" cx="18" cy="18" r="15.9"/>
+                <circle class="ring-fg" cx="18" cy="18" r="15.9" pathLength="100"/>
+              </svg>
+              <div class="ring-label"><strong>99%</strong><span>Transmission</span></div>
+            </div>
+          </article>
+
+          <article class="card reveal" data-spotlight style="--d:.08s">
+            <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div>
+            <h3>9H hardened</h3>
+            <p>Shrugs off keys, coins and drops so your screen doesn't have to. Tested well beyond everyday abuse.</p>
+          </article>
+
+          <article class="card reveal" data-spotlight>
+            <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-zap"/></svg></div>
+            <h3>Seconds to fit</h3>
+            <p>The guided alignment frame makes a perfect, bubble-free install first time — no skill required.</p>
+          </article>
+
+          <article class="card reveal" data-spotlight style="--d:.08s">
+            <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></div>
+            <h3>Oleophobic coating</h3>
+            <p>Fingerprints wipe away with a single pass. The surface stays slick and smooth for the life of the product.</p>
+          </article>
+
+          <article class="card reveal" data-spotlight style="--d:.16s">
+            <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg></div>
+            <h3>Lifetime replacement</h3>
+            <p>If it ever cracks, chips or peels, we'll send a new one. No forms, no fuss, no questions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- Process                                                        -->
+    <!-- ============================================================== -->
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2 id="process-title">Three steps. <em>Zero</em> guesswork.</h2>
+        </div>
+
+        <!-- EDIT: process steps -->
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Choose your device</h3>
+            <p>Pick your exact model from our catalogue. Every cut is laser-matched to the millimetre.</p>
+          </li>
+          <li class="step reveal" style="--d:.1s">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Fit in seconds</h3>
+            <p>Drop the alignment frame over your device, peel, press. The self-healing adhesive does the rest.</p>
+          </li>
+          <li class="step reveal" style="--d:.2s">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Forget it's there</h3>
+            <p>Enjoy edge-to-edge clarity and total protection — backed for life by our replacement promise.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- Stats                                                          -->
+    <!-- ============================================================== -->
+    <!-- EDIT: numbers (data-count animates from 0; prefix/suffix are text) -->
+    <section class="stats" aria-label="By the numbers">
+      <div class="container">
+        <ul class="stats-grid">
+          <li class="stat reveal">
+            <span class="stat-num"><span data-count="250" data-suffix="K+">250K+</span></span>
+            <span class="stat-label">Screens protected</span>
+          </li>
+          <li class="stat reveal" style="--d:.08s">
+            <span class="stat-num"><span data-count="4.9" data-decimals="1">4.9</span></span>
+            <span class="stat-label">Average rating</span>
+          </li>
+          <li class="stat reveal" style="--d:.16s">
+            <span class="stat-num"><span data-count="99" data-suffix="%">99%</span></span>
+            <span class="stat-label">Light transmission</span>
+          </li>
+          <li class="stat reveal" style="--d:.24s">
+            <span class="stat-num"><span data-count="40" data-suffix="+">40+</span></span>
+            <span class="stat-label">Countries served</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- Testimonials                                                   -->
+    <!-- ============================================================== -->
+    <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Reviews</span>
+          <h2 id="testimonials-title">Loved by people who <em>notice</em> the details.</h2>
+        </div>
+
+        <!-- EDIT: testimonials (quote, name, role, initials) -->
+        <div class="testimonials-grid">
+          <figure class="card testimonial reveal" data-spotlight>
+            <blockquote>“Honestly forgot it was on. Zero haze, zero bubbles, and it's survived two drops I was sure had ended my phone.”</blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">AM</span>
+              <span><strong>Amara M.</strong> Verified customer</span>
+            </figcaption>
+          </figure>
+          <figure class="card testimonial reveal" data-spotlight style="--d:.1s">
+            <blockquote>“The alignment frame is genius. First time I've installed a protector without a single bubble. Ordered two more for the family.”</blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">DO</span>
+              <span><strong>David O.</strong> Verified customer</span>
+            </figcaption>
+          </figure>
+          <figure class="card testimonial reveal" data-spotlight style="--d:.2s">
+            <blockquote>“Cracked one after eight months — replacement arrived in three days, no questions asked. That's the kind of warranty that matters.”</blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">SK</span>
+              <span><strong>Sofia K.</strong> Verified customer</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- FAQ                                                            -->
+    <!-- ============================================================== -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 id="faq-title">Questions, <em>answered</em>.</h2>
+        </div>
+
+        <!-- EDIT: FAQ items -->
+        <div class="faq reveal">
+          <div class="faq-item">
+            <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-1-btn">Which devices do you support?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
+            <div class="faq-a" id="faq-1" role="region" aria-labelledby="faq-1-btn"><div><p>We cover the most popular phones, tablets and laptops, with new models added within weeks of release. If you can't find yours, get in touch — we take requests.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">Will it work with my case?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
+            <div class="faq-a" id="faq-2" role="region" aria-labelledby="faq-2-btn"><div><p>Yes. Every cut is designed with a small inset from the edge so it sits comfortably inside virtually all cases without lifting.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">How does the lifetime replacement work?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
+            <div class="faq-a" id="faq-3" role="region" aria-labelledby="faq-3-btn"><div><p>If your protector cracks, chips or peels — ever — send us a quick message with your order number and we'll ship a replacement. You only cover shipping.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">Does it affect touch sensitivity or fingerprint unlock?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
+            <div class="faq-a" id="faq-4" role="region" aria-labelledby="faq-4-btn"><div><p>No. At under 0.3 mm with a dedicated sensor window, touch response and in-display fingerprint readers behave exactly as they do without a protector.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">How long does delivery take?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
+            <div class="faq-a" id="faq-5" role="region" aria-labelledby="faq-5-btn"><div><p>Orders ship within one business day. Typical delivery is 2–4 days domestically and 5–10 days internationally, with tracking on every parcel.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- Contact                                                        -->
+    <!-- ============================================================== -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-copy reveal">
+            <span class="eyebrow">Contact</span>
+            <h2 id="contact-title">Let's <em>talk</em>.</h2>
+            <p class="section-sub">Questions, bulk orders or partnership ideas — send a message and a real person will reply within one business day.</p>
+
+            <!-- EDIT: contact details -->
+            <ul class="contact-list">
+              <li><a href="mailto:hello@vaultscreen.example"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> hello@vaultscreen.example</a></li>
+              <li><a href="tel:+10000000000"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> +1 (000) 000-0000</a></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> 123 Example Street, Your City</li>
+            </ul>
+            <p class="contact-hours"><svg class="icon" aria-hidden="true" style="display:inline-block;vertical-align:-0.2em;margin-right:.35rem"><use href="#i-clock"/></svg>Mon–Fri, 9:00–18:00</p>
+          </div>
+
+          <!--
+            Form: works out of the box as a mailto fallback.
+            To send to a real endpoint (Formspree, Netlify, your API):
+            set data-endpoint="https://formspree.io/f/xxxx" on the <form>.
+            The mailto fallback uses data-mailto.
+          -->
+          <form class="card form-card reveal" id="contact-form" novalidate data-mailto="hello@vaultscreen.example" style="--d:.1s">
+            <div class="form-row">
+              <div class="field">
+                <label for="f-name">Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-subject">Subject</label>
+              <input id="f-subject" name="subject" type="text" placeholder="How can we help?">
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="f-message">Message</label>
+              <textarea id="f-message" name="message" placeholder="Tell us a little about what you need…" required minlength="10"></textarea>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+            <button class="btn btn--primary btn--lg btn--block" type="submit">Send message <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="form-note">We'll never share your details. Replies within one business day.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================ -->
+  <!-- Footer                                                           -->
+  <!-- ================================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="VaultScreen 8K — home">
+            <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+              <rect x="1.5" y="1.5" width="29" height="29" rx="8" fill="none" stroke="url(#bm)" stroke-width="1.5"/>
+              <path d="M16 6.5 9 9.3v6.2c0 4.1 2.9 7.3 7 8.3 4.1-1 7-4.2 7-8.3V9.3L16 6.5Z" fill="url(#bm)" opacity=".18" stroke="url(#bm)" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="m12.6 15.5 2.4 2.4 4.6-4.8" fill="none" stroke="#6ef2d2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>VaultScreen<span class="brand-sub"> 8K</span></span>
+          </a>
+          <!-- EDIT: short brand blurb -->
+          <p>Precision protection and uncompromised clarity for the screens you rely on.</p>
+          <!-- EDIT: social links -->
+          <ul class="socials" aria-label="Social media">
+            <li><a href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+            <li><a href="#" aria-label="X (Twitter)"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a></li>
+            <li><a href="#" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+            <li><a href="#" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
+          </ul>
+        </div>
+
+        <nav aria-labelledby="fl-product">
+          <h3 id="fl-product">Product</h3>
+          <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#process">How it works</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="fl-company">
+          <h3 id="fl-company">Company</h3>
+          <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="fl-legal">
+          <h3 id="fl-legal">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Shipping &amp; returns</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> VaultScreen 8K. All rights reserved.</p>
+        <p>Designed with care. Built for clarity.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Back to top"><svg class="icon" aria-hidden="true"><use href="#i-up"/></svg></a>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
