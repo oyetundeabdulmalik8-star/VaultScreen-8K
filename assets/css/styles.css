@@ -1153,3 +1153,277 @@ textarea { font: inherit; color: inherit; }
 .no-js .nav-toggle { display: none; }
 .no-js .nav { position: static; opacity: 1; visibility: visible; transform: none; }
 .no-js .to-top { display: none; }
+
+
+/* ==========================================================================
+   15. Somi Steam Car Wash — business-specific components
+   ========================================================================== */
+
+/* Static icons in buttons (don't slide on hover) */
+.btn .icon--static { transition: none; }
+.btn:hover .icon--static { transform: none; }
+
+/* Half star for the 4.0 rating */
+.icon--half { opacity: 0.35; }
+
+/* Hero: photo inside the glass frame */
+.screen--photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+}
+.screen--photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 45%, rgba(10, 10, 12, 0.85)),
+    radial-gradient(120% 80% at 100% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 55%);
+  pointer-events: none;
+}
+.screen--photo .screen-sheen { z-index: 2; opacity: 0.6; }
+.screen-caption {
+  position: absolute;
+  left: clamp(1.25rem, 4vw, 2rem);
+  bottom: clamp(1.25rem, 4vw, 2rem);
+  z-index: 3;
+  display: grid;
+  gap: 0.25rem;
+}
+.screen-caption-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.screen-caption-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 0.9rem + 0.8vw, 1.4rem);
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+/* Check list inside the wide service card */
+.check-list { display: grid; gap: 0.55rem; margin-top: 1.25rem; }
+.check-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--text-2);
+}
+.check-list .icon { width: 1.1rem; height: 1.1rem; color: var(--accent); }
+
+/* Ring — configurable percentage via --ring */
+.reveal.is-visible .ring-fg,
+.no-js .ring-fg { stroke-dasharray: var(--ring, 99) 100; }
+
+/* Image card in the bento */
+.card--image {
+  padding: 0;
+  min-height: 15rem;
+  display: flex;
+  align-items: flex-end;
+}
+.card--image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-out);
+}
+.card--image:hover img { transform: scale(1.05); }
+.card--image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10, 10, 12, 0.85));
+  pointer-events: none;
+}
+.card-image-caption {
+  position: relative;
+  z-index: 1;
+  padding: 1.25rem 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+.card--image::before { display: none; }
+
+.section-note {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--text-2);
+  font-size: 0.95rem;
+}
+.section-note a { color: var(--accent); text-underline-offset: 3px; }
+.section-note a:hover { text-decoration: underline; }
+
+/* Lounge: split layout with a framed photo */
+.section--tight { padding-block: clamp(3rem, 7vw, 6rem); }
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+.split-media { position: relative; }
+.photo-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-lg), 0 0 120px -40px rgba(255, 170, 60, 0.35);
+  aspect-ratio: 4 / 3;
+}
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.4s var(--ease-out);
+}
+.photo-frame:hover img { transform: scale(1.04); }
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  background: linear-gradient(180deg, transparent 60%, rgba(10, 10, 12, 0.55));
+  pointer-events: none;
+}
+.chip--static {
+  position: absolute;
+  left: 50%;
+  bottom: -1.1rem;
+  transform: translateX(-50%);
+  animation: none;
+  max-width: calc(100% - 2rem);
+  white-space: normal;
+  text-align: center;
+}
+.split-copy h2 { font-size: var(--fs-h2); }
+
+.feature-list { display: grid; gap: 1.1rem; margin-top: 2rem; }
+.feature-list li { display: flex; gap: 1rem; align-items: flex-start; }
+.feature-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2.5rem; height: 2.5rem;
+  border-radius: 0.75rem;
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  color: var(--accent);
+}
+.feature-list strong { display: block; font-weight: 600; margin-bottom: 0.15rem; }
+.feature-list span:not(.feature-icon) { color: var(--text-2); font-size: 0.95rem; }
+
+/* Reviews */
+.stars--sm .icon { width: 0.85rem; height: 0.85rem; }
+.reviews-cta { display: flex; justify-content: center; margin-top: 2.25rem; }
+
+/* Visit: contact block tweaks */
+.contact-list address { font-style: normal; line-height: 1.5; }
+.contact-list li { align-items: flex-start; }
+.contact-list li .icon { margin-top: 0.2rem; }
+.contact-list .muted { color: var(--text-3); font-size: 0.9em; }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+
+/* Map card: dark-tinted embed + overlay link */
+.map-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elev);
+  box-shadow: var(--shadow-lg);
+  min-height: 24rem;
+  height: 100%;
+}
+.map-embed {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 28rem;
+  border: 0;
+  filter: invert(92%) hue-rotate(180deg) saturate(0.55) brightness(0.9) contrast(0.95);
+}
+.map-overlay-link {
+  position: absolute;
+  left: 1rem; right: 1rem; bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
+  background: color-mix(in srgb, var(--bg-elev) 85%, transparent);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-lg);
+  transition: border-color 0.2s, transform 0.3s var(--ease-out);
+}
+.map-overlay-link:hover { border-color: var(--accent); transform: translateY(-2px); }
+.map-overlay-link > span:nth-child(2) { flex: 1; display: grid; line-height: 1.3; }
+.map-overlay-link strong { font-weight: 600; }
+.map-overlay-link > span:nth-child(2) > span { font-size: var(--fs-sm); color: var(--text-2); }
+.map-overlay-link > .icon { color: var(--accent); transition: transform 0.25s var(--ease-out); }
+.map-overlay-link:hover > .icon { transform: translateX(3px); }
+.map-overlay-pin {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2.5rem; height: 2.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* Mobile sticky action bar */
+.action-bar {
+  display: none;
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 45;
+  gap: 0.5rem;
+  padding: 0.6rem var(--gutter) calc(0.6rem + env(safe-area-inset-bottom));
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  border-top: 1px solid var(--border);
+}
+.action-bar-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.75rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.action-bar-btn .icon { width: 1.05rem; height: 1.05rem; }
+.action-bar-btn--primary { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
+
+@media (max-width: 860px) {
+  .action-bar { display: flex; }
+  body { padding-bottom: 4.5rem; }
+  .to-top { bottom: 5.25rem; }
+  .split { grid-template-columns: 1fr; }
+  .split-media { margin-bottom: 1.5rem; }
+  .map-card { min-height: 20rem; }
+  .map-embed { min-height: 20rem; }
+  .nav-cta { justify-content: center; }
+  .hero-actions .btn { flex: 1 1 100%; }
+  .card--image { min-height: 13rem; }
+}

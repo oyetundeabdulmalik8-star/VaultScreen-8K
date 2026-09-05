@@ -1,86 +1,34 @@
-# Content guide — what to drop in
+# Content guide — what's in, what's still open
 
-Paste your answers under each heading (or just send them in chat) and the placeholder copy in `index.html` gets replaced. Anything you skip keeps its sensible default.
+The site is built from the Google Business listing. Below is what's already in place and what would make it stronger. Send anything here in chat and it gets wired in.
 
-## 1. Brand basics
+## ✅ Already in
 
-- **Business name:** VaultScreen 8K *(already set — change if different)*
-- **Tagline / one-liner:** e.g. "Clarity you can actually trust."
-- **What you sell / do (1–2 sentences):**
-- **Logo:** attach SVG or PNG *(optional — a generated mark is in place)*
-- **Brand colour:** hex code, e.g. `#6ef2d2` *(optional — the accent is swappable in one line)*
-- **Light or dark theme preference:** dark *(default)* / light
+| Item | Source |
+| --- | --- |
+| Name, address, phone, plus code | Google Maps listing |
+| Rating 4.0 · 164 reviews | Google Maps listing |
+| 20-car capacity, bar, restaurant, laundry | Google reviews |
+| 3 testimonials (Adebowale O., Chukwuka E., Emeka N.) | Google reviews, quoted verbatim |
+| Services list | Inferred from "steam car wash" + "most car care services" — **please confirm** |
+| Map embed + directions + WhatsApp links | Derived from the listing |
 
-## 2. Hero
+## 🔲 Still open — highest impact first
 
-- **Headline** (the italic word is the accent — mark it with `*asterisks*`): e.g. "Clarity you can *actually* trust."
-- **Sub-headline** (1–2 sentences):
-- **Primary button** text + link:
-- **Secondary button** text + link:
-- **Announcement pill** (optional short line, e.g. "Now shipping — the new 8K series"):
-- **Trust signals** (up to 3 short items, e.g. "4.9 rating · Lifetime warranty · Free shipping"):
+1. **Opening hours** — e.g. "Mon–Sat 7:00–20:00, Sun 9:00–18:00". The listing has none. (`EDIT:` marker in the Visit section.)
+2. **Confirm the service list** — currently: steam exterior wash · interior steam & vacuum · engine bay cleaning · seat/upholstery shampoo · tyre & rim shine · full detailing. Add/remove as needed.
+3. **Prices** — even "from ₦X" per vehicle size (saloon / SUV / bus). A pricing table can be added if you want one.
+4. **Real photos** — of the yard, the team at work, the bar/lounge. The current three images are AI-generated stand-ins.
+5. **Social links** — Instagram / Facebook / TikTok URLs (footer icons currently point to `#`).
+6. **Logo** — SVG or PNG. A generated steam mark is in place.
+7. **Brand colour** — if Somi has one. Site is currently mint-on-black; a one-line change.
+8. **Domain name** — for the canonical URL and social preview.
+9. **WhatsApp number** — currently assumes the listed phone (0803 331 8896) is on WhatsApp. Confirm or provide another.
+10. **Anything else you offer** — car wash membership, fleet/corporate accounts, event hire of the lounge, etc.
 
-## 3. Ticker strip
+## Optional extras
 
-- 6–8 short phrases (2–4 words each):
-
-## 4. Features (up to 5)
-
-For each: **title**, **1–2 sentence description**, and optionally an icon idea (shield, eye, zap, layers, sparkle, clock…).
-
-1.
-2.
-3.
-4.
-5.
-
-- **Headline stat for the big card** (e.g. "99 % light transmission"):
-
-## 5. How it works (3 steps)
-
-1. **Title** — description
-2. **Title** — description
-3. **Title** — description
-
-## 6. Numbers / stats (4)
-
-e.g. `250K+ screens protected`, `4.9 average rating`, `99 % clarity`, `40+ countries`
-
-1.
-2.
-3.
-4.
-
-## 7. Testimonials (3)
-
-For each: **quote**, **name**, **role or "Verified customer"**.
-
-1.
-2.
-3.
-
-## 8. FAQ (4–6)
-
-**Q:** …
-**A:** …
-
-## 9. Contact
-
-- **Email:**
-- **Phone:**
-- **Address** (or city/region):
-- **Opening hours:**
-- **Form delivery:** open email app *(default)* / Formspree / Netlify / other endpoint URL:
-
-## 10. Footer
-
-- **Short brand blurb** (one sentence):
-- **Social links:** Instagram / X / LinkedIn / YouTube / TikTok / Facebook — URLs
-- **Legal pages you have** (Privacy, Terms, Warranty, Returns…):
-
-## 11. Extras (optional)
-
-- **Product photos** — attach; the CSS hero visual can be swapped for a real image
-- **Pricing tiers** — if you want a pricing section added
-- **Domain name** — for the canonical URL / social preview
-- **Google Analytics / Meta Pixel IDs** — if you want tracking added
+- Pricing section
+- Photo gallery
+- Google Analytics / Meta Pixel IDs
+- Online booking (Calendly / WhatsApp pre-filled message is already there)

@@ -1,66 +1,50 @@
-# VaultScreen 8K
+# Somi Steam Car Wash — website
 
-A premium, single-page marketing website in the **Claude Fable 5 design style** — dark canvas, one accent colour doing all the work, glass surfaces, editorial typography (grotesk + italic serif), and restrained motion that respects `prefers-reduced-motion`.
+Single-page marketing site for **Somi Steam Car Wash**, Plot 90 Kudirat Abiola Way, Oregun, Ikeja, Lagos — built in the Claude Fable 5 design style: dark canvas, one accent colour, glass surfaces, editorial typography and restrained motion.
 
-Zero dependencies. No build step. Plain HTML, CSS and JavaScript — open `index.html` and it works.
+Zero dependencies. No build step. Plain HTML, CSS and JavaScript.
 
-## Project structure
+## Structure
 
 ```
-VaultScreen-8K/
-├── index.html                 # The whole site (one page, sectioned)
-├── assets/
-│   ├── css/styles.css         # Design tokens + all styles (edit :root to re-skin)
-│   ├── js/main.js             # Progressive enhancement (nav, reveal, FAQ, form…)
-│   └── img/
-│       ├── favicon.svg
-│       └── og-image.png       # Social share preview (1200×630)
-├── CONTENT-GUIDE.md           # ← Fill this in with your business details
-└── .github/workflows/
-    └── deploy-pages.yml       # Auto-deploys to GitHub Pages on push to main
+index.html                  the whole site (one page, sectioned)
+assets/css/styles.css       design tokens (:root) + all styles; §15 is business-specific
+assets/js/main.js           progressive enhancement (nav, reveal, count-up, FAQ, tilt…)
+assets/img/                 hero / interior / lounge photos (2 sizes each), favicon, OG image
+.github/workflows/          auto-deploy to GitHub Pages on push to main
+CONTENT-GUIDE.md            what's still open to fill in
 ```
 
 ## Sections
 
-| Section       | Anchor          | What it does                                                    |
-| ------------- | --------------- | --------------------------------------------------------------- |
-| Header        | `#top`          | Sticky, frosts on scroll; mobile menu; scroll-spy active links   |
-| Hero          | —               | Staggered headline reveal, CSS-only product visual, floating chips, pointer tilt |
-| Ticker        | —               | Infinite marquee of highlights (pauses on hover)                |
-| Features      | `#features`     | Bento grid with pointer-tracked spotlight + animated 99 % ring   |
-| How it works  | `#process`      | 3-step process                                                  |
-| Stats         | —               | Count-up numbers on scroll                                      |
-| Reviews       | `#testimonials` | Testimonial cards                                               |
-| FAQ           | `#faq`          | Accessible accordion (`aria-expanded`, animated with CSS grid)  |
-| Contact       | `#contact`      | Validated form — `mailto:` fallback or POST to any endpoint     |
-| Footer        | —               | Links, socials, auto-updating year                              |
+| Anchor       | Section                                                                 |
+| ------------ | ----------------------------------------------------------------------- |
+| `#top`       | Sticky header · tap-to-call CTA · mobile menu                           |
+| —            | Hero: staggered headline, photo in glass frame, floating chips, tilt    |
+| —            | Services ticker                                                         |
+| `#services`  | Bento grid — steam exterior, interior, engine bay, detailing, team      |
+| `#lounge`    | Bar, restaurant & laundry — the "relax while we work" differentiator    |
+| `#process`   | Drive in → pick a service → relax & collect                             |
+| —            | Stats: 20-car capacity · 4.0 rating · 164 reviews · 7 days              |
+| `#reviews`   | Three real Google reviews + link to all reviews                         |
+| `#faq`       | Six FAQs (steam safety, booking, duration, price, location, SUVs)       |
+| `#visit`     | Address, phone, WhatsApp, hours · dark-tinted Google Map · directions   |
+| —            | Footer · mobile sticky Call / WhatsApp / Directions bar                 |
 
 ## Run locally
 
-Any static server works:
-
 ```bash
-npx serve .            # or: python3 -m http.server 8080
+python3 -m http.server 8080      # or: npx serve .
 ```
 
-Then open the URL it prints (usually `http://localhost:3000`).
+## Editing
 
-## Customise
-
-1. **Business content** — search `index.html` for `<!-- EDIT:` comments; every editable block is labelled. `CONTENT-GUIDE.md` lists exactly what information is needed.
-2. **Brand colours / fonts** — edit the tokens at the top of `assets/css/styles.css` (`--accent`, `--bg`, `--font-display`, …). One accent colour drives the whole site.
-3. **Contact form** — by default it opens the visitor's email app (`data-mailto`). To post to a real service, add `data-endpoint="https://formspree.io/f/XXXX"` to the `<form>` in `index.html`.
-4. **Social preview image** — replace `assets/img/og-image.png` (1200×630).
+- **Copy** — everything lives in `index.html`; search for `EDIT:` for the spots still waiting on real info.
+- **Colours / fonts** — the tokens at the top of `assets/css/styles.css`. `--accent` drives the whole site.
+- **Photos** — the current images are AI-generated placeholders. Drop real photos into `assets/img/` with the same filenames (`hero-1600.jpg` / `hero-800.jpg`, `interior-1200.jpg` / `interior-600.jpg`, `lounge-1600.jpg` / `lounge-800.jpg`) and they'll slot straight in.
+- **Map / directions** — all links use the Google Place ID `ChIJd1pBMEWSOxARdOuVdtgQo38`; no API key required.
+- **Structured data** — `AutoWash` JSON-LD in `<head>` gives Google the address, phone, rating and map.
 
 ## Deploy
 
-**GitHub Pages (included):** push to `main` and the workflow in `.github/workflows/deploy-pages.yml` publishes the site. Enable it once under *Settings → Pages → Source: GitHub Actions*.
-
-Also drops straight onto Netlify, Vercel, Cloudflare Pages or any static host — no build command, publish directory `/`.
-
-## Accessibility & performance
-
-- Semantic landmarks, skip link, visible focus rings, labelled controls
-- Works without JavaScript (nav, FAQ and form all degrade gracefully)
-- Honours `prefers-reduced-motion`
-- Fonts are the only external requests; everything else is inline or local
+Push to `main` → the included workflow publishes to GitHub Pages. One-time: *Settings → Pages → Source: GitHub Actions*. Also works on Netlify / Vercel / Cloudflare Pages with no build command and publish directory `/`.
