@@ -17,7 +17,7 @@ The site is built from the Google Business listing. Below is what's already in p
 
 1. **Opening hours** — e.g. "Mon–Sat 7:00–20:00, Sun 9:00–18:00". The listing has none. (`EDIT:` marker in the Visit section.)
 2. **Confirm the service list** — currently: steam exterior wash · interior steam & vacuum · engine bay cleaning · seat/upholstery shampoo · tyre & rim shine · full detailing. Add/remove as needed.
-3. **Prices** — even "from ₦X" per vehicle size (saloon / SUV / bus). A pricing table can be added if you want one.
+3. **Prices** — the pricing section is built with three tiers (Exterior Steam · Inside & Out · Full Detail) and four add-ons, each with a Saloon / SUV / Bus toggle. Send the numbers per size and they drop straight in. Also tell me if the tier names or what's included need changing.
 4. **Real photos** — of the yard, the team at work, the bar/lounge. The current three images are AI-generated stand-ins.
 5. **Social links** — Instagram / Facebook / TikTok URLs (footer icons currently point to `#`).
 6. **Logo** — SVG or PNG. A generated steam mark is in place.
@@ -28,7 +28,6 @@ The site is built from the Google Business listing. Below is what's already in p
 
 ## Optional extras
 
-- Pricing section
 - Photo gallery
 - Google Analytics / Meta Pixel IDs
 - Online booking (Calendly / WhatsApp pre-filled message is already there)

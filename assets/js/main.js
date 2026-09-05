@@ -179,6 +179,54 @@
   }
 
   /* ------------------------------------------------------------------
+     Pricing — vehicle-size toggle
+     Prices live on the elements as data-saloon / data-suv / data-bus
+     (numbers only). Empty value → "Ask".
+  ------------------------------------------------------------------ */
+  const sizeButtons = $$('.size-btn');
+  const priceEls    = $$('.price-amount, .addon-price');
+
+  const fmtNaira = (n) => '\u20A6' + Number(n).toLocaleString('en-NG');
+
+  const applySize = (size, animate = true) => {
+    priceEls.forEach((el) => {
+      const holder = el.classList.contains('price-amount') ? el.parentElement : el;
+      const raw = (holder.dataset[size] || '').trim();
+      const text = raw ? fmtNaira(raw) : (holder.dataset.saloon || holder.dataset.suv || holder.dataset.bus ? 'Ask' : '\u20A6\u2014');
+      const swap = () => {
+        el.textContent = text;
+        el.classList.toggle('is-ask', text === 'Ask');
+        el.classList.remove('is-swapping');
+      };
+      if (animate && !reduceMotion.matches && el.classList.contains('price-amount')) {
+        el.classList.add('is-swapping');
+        setTimeout(swap, 180);
+      } else {
+        swap();
+      }
+    });
+    sizeButtons.forEach((b) => {
+      const on = b.dataset.size === size;
+      b.setAttribute('aria-selected', String(on));
+      b.tabIndex = on ? 0 : -1;
+    });
+  };
+
+  if (sizeButtons.length) {
+    sizeButtons.forEach((btn, i) => {
+      btn.addEventListener('click', () => applySize(btn.dataset.size));
+      btn.addEventListener('keydown', (e) => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        e.preventDefault();
+        const next = sizeButtons[(i + (e.key === 'ArrowRight' ? 1 : -1) + sizeButtons.length) % sizeButtons.length];
+        next.focus();
+        applySize(next.dataset.size);
+      });
+    });
+    applySize('saloon', false);
+  }
+
+  /* ------------------------------------------------------------------
      FAQ accordion (one open at a time)
   ------------------------------------------------------------------ */
   const faqButtons = $$('.faq-q');

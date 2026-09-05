@@ -23,9 +23,6 @@
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/styles.css">
   <script>document.documentElement.classList.replace('no-js', 'js');</script>
@@ -116,7 +113,7 @@
           <path d="M10 6c-1.6 2.2-1.6 3.8 0 6s1.6 3.8 0 6M16 6c-1.6 2.2-1.6 3.8 0 6s1.6 3.8 0 6M22 6c-1.6 2.2-1.6 3.8 0 6s1.6 3.8 0 6" fill="none" stroke="url(#bm)" stroke-width="1.8" stroke-linecap="round"/>
           <path d="M8 22h16M10 25.5h12" stroke="#6ef2d2" stroke-width="1.8" stroke-linecap="round"/>
         </svg>
-        <span>Somi<span class="brand-sub"> Steam</span></span>
+        <span class="brand-text"><span class="brand-name">Somi<span class="brand-sub"> Steam</span></span><span class="brand-tag">Car Wash &middot; Oregun</span></span>
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
@@ -128,6 +125,7 @@
         <ul class="nav-list">
           <li><a href="#services">Services</a></li>
           <li><a href="#lounge">Lounge</a></li>
+          <li><a href="#pricing">Pricing</a></li>
           <li><a href="#process">How it works</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -156,8 +154,8 @@
           <p class="lead">One of the largest car washes in Ikeja. High-pressure steam lifts the dirt Lagos throws at your paint and upholstery — while you relax at the bar next door.</p>
 
           <div class="hero-actions">
-            <a class="btn btn--primary btn--lg" href="tel:+2348033318896"><svg class="icon icon--static" aria-hidden="true"><use href="#i-phone"/></svg> Call to book</a>
-            <a class="btn btn--ghost btn--lg" href="https://www.google.com/maps/dir/?api=1&amp;destination=Somi+Steam+Car+Wash,+Plot+90+Kudirat+Abiola+Way,+Oregun,+Lagos&amp;destination_place_id=ChIJd1pBMEWSOxARdOuVdtgQo38" target="_blank" rel="noopener">Get directions <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--primary btn--lg" href="tel:+2348033318896"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call to book</a>
+            <a class="btn btn--ghost btn--lg" href="https://www.google.com/maps/dir/?api=1&amp;destination=Somi+Steam+Car+Wash,+Plot+90+Kudirat+Abiola+Way,+Oregun,+Lagos&amp;destination_place_id=ChIJd1pBMEWSOxARdOuVdtgQo38" target="_blank" rel="noopener">Get directions <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
 
           <ul class="hero-trust" aria-label="Highlights">
@@ -167,7 +165,7 @@
                 <svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg>
                 <svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg>
                 <svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg>
-                <svg class="icon icon--fill icon--half" aria-hidden="true"><use href="#i-star"/></svg>
+                <svg class="icon icon--fill icon--empty" aria-hidden="true"><use href="#i-star"/></svg>
               </span>
               4.0 on Google &middot; 164 reviews
             </li>
@@ -182,7 +180,7 @@
           <div class="chip chip--2"><svg class="icon" aria-hidden="true"><use href="#i-glass"/></svg> Relax at the bar</div>
           <div class="chip chip--3"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg> 20 cars at once</div>
 
-          <div class="screen screen--photo" data-tilt>
+          <div class="screen" data-tilt>
             <img src="assets/img/hero-800.jpg" srcset="assets/img/hero-800.jpg 800w, assets/img/hero-1600.jpg 1600w" sizes="(max-width: 860px) 92vw, 44vw" width="1600" height="1001" alt="" fetchpriority="high" decoding="async">
             <div class="screen-sheen"></div>
             <div class="screen-caption">
@@ -262,7 +260,7 @@
 
           <article class="card card--image reveal" data-spotlight>
             <img src="assets/img/interior-600.jpg" srcset="assets/img/interior-600.jpg 600w, assets/img/interior-1200.jpg 1200w" sizes="(max-width: 600px) 92vw, (max-width: 1024px) 46vw, 24vw" width="1200" height="800" alt="Steam nozzle sanitising a black leather car seat" loading="lazy" decoding="async">
-            <div class="card-image-caption">Upholstery &amp; leather care</div>
+            <div class="card-image-caption"><strong>Upholstery &amp; leather care</strong><span>Steam-sanitised, not just wiped</span></div>
           </article>
 
           <article class="card reveal" data-spotlight style="--d:.08s">
@@ -298,7 +296,10 @@
             <div class="photo-frame">
               <img src="assets/img/lounge-800.jpg" srcset="assets/img/lounge-800.jpg 800w, assets/img/lounge-1600.jpg 1600w" sizes="(max-width: 860px) 92vw, 48vw" width="1600" height="1067" alt="Outdoor lounge and bar beside the car wash at dusk, drinks on a table with cars in the background" loading="lazy" decoding="async">
             </div>
-            <div class="chip chip--static"><svg class="icon" aria-hidden="true"><use href="#i-glass"/></svg> Best car wash / bar in Lagos — Google review</div>
+            <div class="quote-card">
+              <span class="stars" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg></span>
+              <p>“Best carwash/bar in Lagos.”<span>Adebowale O. &middot; Google review</span></p>
+            </div>
           </div>
           <div class="split-copy reveal" style="--d:.1s">
             <span class="eyebrow">The lounge</span>
@@ -324,6 +325,101 @@
     </section>
 
     <!-- ============================================================== -->
+    <!-- Pricing                                                        -->
+    <!-- ============================================================== -->
+    <!--
+      EDIT: prices. Each tier has a data-price per vehicle size:
+        data-saloon / data-suv / data-bus  (numbers only, no ₦ or commas)
+      Leave a value empty to show "Ask" for that size.
+    -->
+    <section class="section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Pricing</span>
+          <h2 id="pricing-title">Simple prices. <em>No</em> surprises.</h2>
+          <p class="section-sub">Pick your vehicle size to see prices. The team confirms the total before starting — what you're quoted is what you pay.</p>
+        </div>
+
+        <div class="size-toggle reveal" role="tablist" aria-label="Vehicle size">
+          <button class="size-btn" type="button" role="tab" aria-selected="true" data-size="saloon" id="size-saloon">Saloon</button>
+          <button class="size-btn" type="button" role="tab" aria-selected="false" data-size="suv" id="size-suv">SUV / Jeep</button>
+          <button class="size-btn" type="button" role="tab" aria-selected="false" data-size="bus" id="size-bus">Bus / Van</button>
+        </div>
+
+        <div class="pricing-grid" data-pricing>
+          <article class="card price-card reveal" data-spotlight>
+            <div class="price-head">
+              <h3>Exterior Steam</h3>
+              <p>The everyday clean. In and out in about 30 minutes.</p>
+            </div>
+            <div class="price" data-saloon="" data-suv="" data-bus="">
+              <span class="price-from">from</span>
+              <span class="price-amount">₦—</span>
+            </div>
+            <ul class="check-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Full-body steam wash</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Door jambs &amp; sills</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Wheels, tyres &amp; rim shine</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Windows inside &amp; out</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="tel:+2348033318896">Call to book</a>
+          </article>
+
+          <article class="card price-card price-card--featured reveal" data-spotlight style="--d:.08s">
+            <span class="price-badge">Most popular</span>
+            <div class="price-head">
+              <h3>Inside &amp; Out</h3>
+              <p>Exterior steam plus a full interior refresh.</p>
+            </div>
+            <div class="price" data-saloon="" data-suv="" data-bus="">
+              <span class="price-from">from</span>
+              <span class="price-amount">₦—</span>
+            </div>
+            <ul class="check-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Everything in Exterior Steam</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Interior steam sanitising</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Full vacuum &amp; mats</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Dashboard, vents &amp; touch-points</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Air freshener</li>
+            </ul>
+            <a class="btn btn--primary btn--block" href="tel:+2348033318896"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call to book</a>
+          </article>
+
+          <article class="card price-card reveal" data-spotlight style="--d:.16s">
+            <div class="price-head">
+              <h3>Full Detail</h3>
+              <p>The complete showroom treatment, top to bottom.</p>
+            </div>
+            <div class="price" data-saloon="" data-suv="" data-bus="">
+              <span class="price-from">from</span>
+              <span class="price-amount">₦—</span>
+            </div>
+            <ul class="check-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Everything in Inside &amp; Out</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Seat &amp; upholstery shampoo</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Engine bay steam clean</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Polish &amp; finishing</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="tel:+2348033318896">Call to book</a>
+          </article>
+        </div>
+
+        <!-- EDIT: add-on prices -->
+        <div class="addons reveal">
+          <h3 class="addons-title">Add-ons</h3>
+          <ul class="addons-list">
+            <li><span>Engine bay steam</span><span class="addon-price" data-saloon="" data-suv="" data-bus="">₦—</span></li>
+            <li><span>Seat shampoo (per row)</span><span class="addon-price" data-saloon="" data-suv="" data-bus="">₦—</span></li>
+            <li><span>Headlight restoration</span><span class="addon-price" data-saloon="" data-suv="" data-bus="">₦—</span></li>
+            <li><span>Odour treatment</span><span class="addon-price" data-saloon="" data-suv="" data-bus="">₦—</span></li>
+          </ul>
+        </div>
+
+        <p class="section-note">Fleet or corporate account? <a href="tel:+2348033318896">Call 0803 331 8896</a> for volume rates.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
     <!-- Process                                                        -->
     <!-- ============================================================== -->
     <section class="section" id="process" aria-labelledby="process-title">
@@ -334,17 +430,17 @@
         </div>
 
         <ol class="steps">
-          <li class="step reveal">
+          <li class="step reveal" data-n="01">
             <span class="step-num" aria-hidden="true">1</span>
             <h3>Drive in</h3>
             <p>Find us beside Conoil Petrol Station on Kudirat Abiola Way. No appointment needed — there's room for 20 cars, so there's almost always a bay free.</p>
           </li>
-          <li class="step reveal" style="--d:.1s">
+          <li class="step reveal" data-n="02" style="--d:.1s">
             <span class="step-num" aria-hidden="true">2</span>
             <h3>Pick your service</h3>
             <p>Tell the team what you need — a quick exterior steam, an interior deep clean, or the full detail. They'll confirm the price before they start.</p>
           </li>
-          <li class="step reveal" style="--d:.2s">
+          <li class="step reveal" data-n="03" style="--d:.2s">
             <span class="step-num" aria-hidden="true">3</span>
             <h3>Relax &amp; collect</h3>
             <p>Head to the bar or restaurant while we work. We'll call you over when your car is gleaming and ready to go.</p>
@@ -392,9 +488,7 @@
 
         <div class="testimonials-grid">
           <figure class="card testimonial reveal" data-spotlight>
-            <div class="stars stars--sm" aria-label="5 out of 5 stars">
-              <svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg>
-            </div>
+            <span class="source-badge"><svg class="icon" aria-hidden="true"><use href="#i-google"/></svg> Google review</span>
             <blockquote>“Superb service, top notch, innovative, top of the range excellent result. Best carwash/bar in Lagos.”</blockquote>
             <figcaption>
               <span class="avatar" aria-hidden="true">AO</span>
@@ -402,9 +496,7 @@
             </figcaption>
           </figure>
           <figure class="card testimonial reveal" data-spotlight style="--d:.1s">
-            <div class="stars stars--sm" aria-label="5 out of 5 stars">
-              <svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg>
-            </div>
+            <span class="source-badge"><svg class="icon" aria-hidden="true"><use href="#i-google"/></svg> Google review</span>
             <blockquote>“This car wash has to be the largest car wash in Ikeja. It has a washing ground that can sit 20 cars at a time, and there are enough workers to meet that capacity. Located beside a laundry shop, a bar, a restaurant…”</blockquote>
             <figcaption>
               <span class="avatar" aria-hidden="true">CE</span>
@@ -412,9 +504,7 @@
             </figcaption>
           </figure>
           <figure class="card testimonial reveal" data-spotlight style="--d:.2s">
-            <div class="stars stars--sm" aria-label="5 out of 5 stars">
-              <svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon--fill" aria-hidden="true"><use href="#i-star"/></svg>
-            </div>
+            <span class="source-badge"><svg class="icon" aria-hidden="true"><use href="#i-google"/></svg> Google review</span>
             <blockquote>“One of the biggest car wash in Oregun, Ikeja. They offer most car care services.”</blockquote>
             <figcaption>
               <span class="avatar" aria-hidden="true">EN</span>
@@ -424,7 +514,7 @@
         </div>
 
         <div class="reviews-cta reveal">
-          <a class="btn btn--ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJd1pBMEWSOxARdOuVdtgQo38" target="_blank" rel="noopener"><svg class="icon icon--static" aria-hidden="true"><use href="#i-google"/></svg> Read all 164 reviews on Google</a>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJd1pBMEWSOxARdOuVdtgQo38" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-google"/></svg> Read all 164 reviews on Google</a>
         </div>
       </div>
     </section>
@@ -454,7 +544,7 @@
           </div>
           <div class="faq-item">
             <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">How much does it cost?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-            <div class="faq-a" id="faq-4" role="region" aria-labelledby="faq-4-btn"><div><p>Prices depend on the size of the vehicle (saloon, SUV, bus) and the service you choose. The team confirms the price with you before starting — no surprises. Call ahead for a quote if you'd like to plan.</p></div></div>
+            <div class="faq-a" id="faq-4" role="region" aria-labelledby="faq-4-btn"><div><p>Prices depend on the size of the vehicle (saloon, SUV, bus) and the service you choose — see the <a class="inline-link" href="#pricing">pricing section</a> for a guide. The team confirms the total with you before starting, so there are no surprises.</p></div></div>
           </div>
           <div class="faq-item">
             <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">Where exactly are you?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
@@ -486,11 +576,11 @@
               </li>
               <li><a href="tel:+2348033318896"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> 0803 331 8896</a></li>
               <li><a href="https://wa.me/2348033318896?text=Hello%20Somi%20Steam%20Car%20Wash%2C%20I%27d%20like%20to%20ask%20about%20a%20wash." target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Chat on WhatsApp</a></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> <span>Open 7 days &middot; <span class="muted">EDIT: add opening hours</span></span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> <span>Open 7 days a week<br><span class="muted">Hours: <!-- EDIT: e.g. Mon–Sat 7:00–20:00, Sun 9:00–18:00 -->call to confirm</span></span></li>
             </ul>
 
             <div class="contact-actions">
-              <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Somi+Steam+Car+Wash,+Plot+90+Kudirat+Abiola+Way,+Oregun,+Lagos&amp;destination_place_id=ChIJd1pBMEWSOxARdOuVdtgQo38" target="_blank" rel="noopener"><svg class="icon icon--static" aria-hidden="true"><use href="#i-navigate"/></svg> Get directions</a>
+              <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Somi+Steam+Car+Wash,+Plot+90+Kudirat+Abiola+Way,+Oregun,+Lagos&amp;destination_place_id=ChIJd1pBMEWSOxARdOuVdtgQo38" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-navigate"/></svg> Get directions</a>
               <a class="btn btn--ghost" href="tel:+2348033318896">Call now</a>
             </div>
             <p class="contact-hours">Plus code: H9W9+VC Lagos</p>
@@ -502,14 +592,13 @@
               class="map-embed"
               title="Map showing Somi Steam Car Wash, Plot 90 Kudirat Abiola Way, Oregun, Lagos"
               src="https://maps.google.com/maps?q=place_id:ChIJd1pBMEWSOxARdOuVdtgQo38&amp;ll=6.59716,3.36859&amp;z=16&amp;output=embed"
-              width="600" height="450"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               allowfullscreen></iframe>
             <a class="map-overlay-link" href="https://www.google.com/maps/place/?q=place_id:ChIJd1pBMEWSOxARdOuVdtgQo38" target="_blank" rel="noopener">
               <span class="map-overlay-pin"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
-              <span><strong>Somi Steam Car Wash</strong><span>Open in Google Maps</span></span>
-              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+              <span class="map-overlay-text"><strong>Somi Steam Car Wash</strong><span>Open in Google Maps</span></span>
+              <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
         </div>
@@ -531,7 +620,7 @@
               <path d="M10 6c-1.6 2.2-1.6 3.8 0 6s1.6 3.8 0 6M16 6c-1.6 2.2-1.6 3.8 0 6s1.6 3.8 0 6M22 6c-1.6 2.2-1.6 3.8 0 6s1.6 3.8 0 6" fill="none" stroke="url(#bm)" stroke-width="1.8" stroke-linecap="round"/>
               <path d="M8 22h16M10 25.5h12" stroke="#6ef2d2" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
-            <span>Somi<span class="brand-sub"> Steam</span></span>
+            <span class="brand-text"><span class="brand-name">Somi<span class="brand-sub"> Steam</span></span><span class="brand-tag">Car Wash &middot; Oregun</span></span>
           </a>
           <p>Steam car wash, detailing and full car care in Oregun, Ikeja — with a bar and restaurant on site.</p>
           <!-- EDIT: add real social URLs -->
@@ -556,6 +645,7 @@
           <h3 id="fl-explore">Explore</h3>
           <ul class="footer-links">
             <li><a href="#lounge">Bar &amp; restaurant</a></li>
+            <li><a href="#pricing">Pricing</a></li>
             <li><a href="#process">How it works</a></li>
             <li><a href="#reviews">Reviews</a></li>
             <li><a href="#faq">FAQ</a></li>
