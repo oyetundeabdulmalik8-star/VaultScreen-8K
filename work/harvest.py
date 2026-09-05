@@ -64,9 +64,17 @@ def tikwm(url):
 
 
 def tikwm_user(handle, count=8):
+    import time
     api = ("https://www.tikwm.com/api/user/posts?unique_id=%s&count=%d"
            % (urllib.parse.quote(handle), count))
-    return json.loads(http_get(api).decode("utf-8", "replace"))
+    last = None
+    for attempt in range(5):
+        try:
+            return json.loads(http_get(api).decode("utf-8", "replace"))
+        except Exception as e:  # noqa: BLE001
+            last = e
+            time.sleep(4 * (attempt + 1))
+    raise last
 
 
 def save_media_from_item(data, outdir, tag=""):
@@ -191,6 +199,7 @@ def main():
                     vids = (j.get("data") or {}).get("videos") or []
                     rec["method"] = "tikwm-user"
                     picked = 0
+                    import time as _t
                     for v in vids:
                         if picked >= 3:
                             break
@@ -206,6 +215,7 @@ def main():
                         if got:
                             media += got
                             picked += 1
+                        _t.sleep(2)
                     rec["notes"] += " sampled %d recent posts" % picked
                 else:
                     j = tikwm(url)
